@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'sans-serif', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body{
+	min-height: 100vh;
+	background: #282923;
+}
+
+.home{
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+	background: #282923;
+}
+.homeBackground{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	/*z-index: -1;
+	opacity: 1;*/
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #282923;
+}
+
+/*.row .text{
+	text-align: justify;
+	color: #282923;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+
+.text .keys{
+	transition: 1s ease-in-out;
+}
+.text .keys:hover{
+	transition: 0s ease-in-out;
+}
+
+.text .keys:nth-child(9n+1):hover{
+	color: #f00;
+}
+
+.text .keys:nth-child(9n+2):hover{
+	color: #0f0;
+}
+
+.text .keys:nth-child(9n+3):hover{
+	color: #fff;
+}
+
+.text .keys:nth-child(9n+4):hover{
+	color: #ff0;
+}
+
+.text .keys:nth-child(9n+5):hover{
+	color: #0ff;
+}
+
+.text .keys:nth-child(9n+6):hover{
+	color: #f0f;
+}
+
+.text .keys:nth-child(9n+7):hover{
+	color: #e91e63;
+}
+
+.text .keys:nth-child(9n+8):hover{
+	color: #00ffad;
+}
+
+.text .keys:nth-child(9n+9):hover{
+	color: #f45103;
+}
+
+.text .keys:nth-child(9n+10):hover{
+	color: #ffff00;
+}
+*/
+
+
+
+header{
+	background: #6d6d69;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 40px;
+}
+
+header .navigation .dlRes{
+	text-decoration: none;
+	color: rgba(255,255,255,.5);
+	font-weight: 300;
+	font-size: 15px;
+	width: 200px;
+	height: 40px;
+	background: #6d6d69;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+header .navigation .dlRes:hover{
+	color: rgba(255,255,255,.75);
+}
+
+.navigation{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background: #6d6d69;
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+	border-radius: 10px;
+	padding-left:30px ;
+
+}
+
+.navigation ul{
+	display: flex;
+	width: 100%;
+	background-color: #6d6d69;
+	padding-top: 15px;
+	height: 40px;
+}
+
+.navigation ul li{
+	list-style: none;
+	position: relative;
+	width: 200px;
+	height: 40px;
+	z-index: 2;
+
+}
+
+.navigation ul li a{
+	position: relative;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	padding-left: 20px;
+	/*border-right: 0.5px solid #ffffff;*/
+}
+
+.indicator{
+	position: absolute;
+	top: 5px;
+	width: 200px;
+	height: 35px;
+	background: #282923;
+	border-radius: 10px;
+	z-index: 1;
+	/*transition: 0.5s;*/
+
+}
+
+.indicator::before{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: -30px;
+	width: 30px;
+	height: 30px;
+	background: transparent;
+	border-radius: 50%;
+	box-shadow: 15px 18px #282923;
+}
+
+.indicator::after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	right: -30px;
+	width: 30px;
+	height: 30px;
+	background: transparent;
+	border-radius: 50%;
+	box-shadow: -15px 18px #282923;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+	transform: translateX(calc(200px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator{
+	transform: translateX(calc(200px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator{
+	transform: translateX(calc(200px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+	transform: translateX(calc(200px * 3));
+}
+
+.tags {
+	z-index: 10000;
+    color: #515152;
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-family: 'La Belle Aurore',cursive;
+    font-weight: normal;
+    
+}
+
+.top-tags {
+    bottom: auto;
+    font-size: 1.5rem;
+    top: 80px;
+}
+
+.top-tags:after {
+	z-index: 10000;
+    content: '<body>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-left: 2rem;
+}
+
+.bottom-tags {
+    bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.bottom-tags:before {
+	z-index: 10000;
+    content: '</body>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-left: 2rem;
+}
+.loader {
+	
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 9rem 3rem;
+    position: relative;
+}
+
+
+.loader .text{
+	width: 60%;
+	padding-left: 5rem;
+	height: 237px;
+
+}
+
+.loader .blob{
+	width: 40%;
+	height: 50vh;
+	align-items: center;
+}
+
+.blob-content{
+	position: relative;
+    height: 70vh;
+    width: 80vw;
+    right:500px;
+    top:-150px;
+    padding-left: 10rem;
+    padding-top: 5rem;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: flex;*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+/*    -webkit-box-pack: center;*/
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.blob-content .pic{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	right: -60px;
+	overflow: hidden;
+	object-fit: contain;
+}
+.blob-content .tea{
+	position: absolute;
+	width: auto;
+	height: 200px;
+	
+	left: 20px;
+	overflow: hidden;
+}
+
+.home-bg{
+	
+}
+
+
+/*.loader{
+	position: absolute;
+	/*float: center;*/
+	/*background:rgba(255,255,255,0.2);
+	box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+	border: 1px solid rgba(255,255,255, 0, 0, 1.0);*/
+	top: 15rem;
+	left: 200px;
+	/*height:150px ;
+	width: 900px;*/
+	display: flex;
+	padding: 20px;
+	/*justify-content: center;
+	border-radius: 20px;*/
+	width: 60%;
+}*/
+
+.loader:before {
+    content: '<h1>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+   /* margin-top: -5rem;*/
+    top: 50px;
+    left: 100px;
+}
+
+.loader:after {
+    content: '</h1>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 3.8rem;
+    top: 190px;
+    left: 90px;
+}
+
+.typed-cursor {
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 900;
+
+}
+
+#element{
+	display: inline;
+	letter-spacing: 5px;
+	font-size: 3.5em;
+	font-weight: 900;
+	justify-content: left;
+	width: 100%;
+	height:237px;
+}
+
+
+
+												/*ABOUT PAGE CSS*/
+
+
+.page-outer .page-inner{
+    min-height: 100vh;
+    position: relative;
+    background:#282923 ;
+}
+/*.page-about {
+	min-height: 100vh;
+	top: 0;
+    position: relative;
+    padding: 9rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+*/.page-about {
+	
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 9rem 3rem;
+    position: relative;
+}
+
+
+.page-about .about-text{
+	width: 40%;
+	padding-left: 5rem;
+
+}
+
+.page-about .about-skills{
+	width: 60%;
+}
+
+.about-skills #tag-cloud{
+	position: relative;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.about-text h2{
+	font-family: font-file-82132;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: -10px;
+    font-size: 7.3rem;
+    line-height: 6.7rem;
+}
+
+h2:before{
+	content: '<h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -2rem;
+    left: -1rem;
+    font-weight: normal;
+}
+
+h2:after{
+	content: '</h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    left: -1rem;
+    bottom: -4rem;
+    font-weight: normal;
+}
+
+.about-text p{
+	color: #fff;
+	margin-bottom: 1.5rem;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20px;
+}
+
+.about-text p:first-of-type:before {
+    content: '<p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    /*margin-top: -rem;*/
+    left: 7rem;
+    
+}
+.about-text p:last-of-type:after {
+    content: '</p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    /*left: -2rem;
+    bottom: -3rem;*/
+}
+
+#element2{
+	display: inline;
+	letter-spacing: 5px;
+	font-size: 3.5em;
+	font-weight: 900;
+}
+
+
+												/*My Works CSS*/
+
+.myWorks{
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+	background: #282923;
+}
+
+
+
+#element3{
+	display: inline;
+	letter-spacing: 5px;
+	font-size: 3.5em;
+	font-weight: 900;
+}
+
+
+
+
+@media (max-width: 991px){
+	header .navigation .dlRes {
+		font-size: 12px;
+		padding-top:15px ;
+		
+		justify-content: right;
+	}
+}
+
+
+
+@media (max-width: 600px){
+	section .home{
+		min-height: 180vh;
+	}
+
+	.navigation ul,
+	a{
+		display: none;
+		visibility: hidden;
+		background-color: #282923;
+	}
+
+	.navigation {
+		background-color: #282923;
+	}
+
+	.loader {
+    	position: absolute;
+   		/* background: rgba(255,255,255,0.2); */
+   		/*box-shadow: 0 15px 25px rgb(0 0 0 / 5%);
+   		border: 1px solid rgba(255,255,255, 0, 0, 1.0);*/
+   		height: 200px;
+   		width: 450px;
+  		display: flex;
+  		justify-content: center;
+   		padding: 20px;
+   		border-radius: 20px;
+   		margin-left: 15px;
+   	}
+   	#element {
+    	display: inline;
+   	 	letter-spacing: 1px;
+    	font-size: 2.5em;
+	}
+
+	header .sticky .toggle{
+		z-index: 1000;
+		position: fixed;
+		top: 15px;
+		right: 40px;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		background: #fff url(menu.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+
