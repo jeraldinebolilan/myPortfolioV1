@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Jeraldine | Web Developer</title>
+		<link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+ 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	</head>
+
+	<body>
+		<header>
+
+			<div class="logo">
+				
+			</div>
+
+			<div class="toggle">
+				
+			</div>
+
+			<div class="navigation">
+				<ul>
+					<li class="list">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="list">
+						<a href="about.html">Get To Know Me</a>
+					</li>
+					<li class="list active">
+						<a href="myWorks.html">Projects</a>
+					</li>
+					<li class="list">
+						<a href="contactMe.html">Contact Me</a>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+				<a class="dlRes" href="assets/JeraldineBolilan_Resume.docx" download>Download Resume</a>
+			</div>
+
+		</header>
+
+		<section class="myWorks">
+			<div class="page-outer">
+				<span class="tags top-tags">
+					&lthtml&gt
+				<br>
+				</span>
+				<div class="page-inner">
+					<div class="page-projects">
+						<div class="myWorksText">
+							<h2 id="element4"></h2>
+						</div>
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="assets/portfolio.png">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+										
+										
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="projectIMG">
+											<img src="">
+											<div class="info">
+												<h1 class="slidesTitle">Developer's Portfolio</h1>
+												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eum reiciendis dolorem sit corporis consequuntur, minima assumenda, quia consectetur. Consequuntur quo facere, explicabo distinctio! Laborum esse qui praesentium temporibus illum!</p>
+												<a href="https://jeraldinebolilan.github.io/myPortfolioV1/" target="_blank">Visit</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+							
+							<!-- <div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-scrollbar"></div> -->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+
+				</div>
+				<span class="tags bottom-tags">
+					<br>
+					&lt/html&gt
+				
+				</span>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+		<script>
+			const list = document.querySelectorAll('.list');
+			function activeLink(){
+				list.forEach((item) =>
+				item.classList.remove('active'));
+				this.classList.add('active')
+			}
+			list.forEach((item)=>
+			item.addEventListener('click',activeLink));
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+		<script>
+			var typed2 = new Typed('#element4', {
+			strings: [
+
+					`<span style="color: #E42CE7">My</span>
+					<span style="color: #00BFFF">Recent</span>
+					<span style="color: #5DFC0A">.Projects</span>
+					<span style="color: #fff">{ }</span>`
+
+					],
+			typeSpeed: 30
+			});
+		</script>
+
+
+		
+		<script type="text/javascript">
+			const swiper = new Swiper('.swiper', {
+
+				
+				pagination:true,
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				coverflowEffect: {
+					rotate: 20,
+					stretch: 100,
+					depth: 200,
+					modifier: 1,
+					slideShadows: true
+
+				},
+				  // Optional parameters
+				  //direction: 'vertical',
+				  loop: true,
+
+				  // If we need pagination
+				  pagination: {
+				  	el: '.swiper-pagination',
+				  	enabled: true
+				  },
+
+				  // Navigation arrows
+				  //navigation: {
+				    //nextEl: '.swiper-button-next',
+				    //prevEl: '.swiper-button-prev',
+				  //},
+
+				  // And if we need scrollbar
+				  //scrollbar: {
+				    //el: '.swiper-scrollbar',
+				  //},
+				});
+		</script>
+
+	</body>
+</html>

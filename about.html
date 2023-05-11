@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Jeraldine | Web Developer</title>
+		<link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+
+			<div class="logo">
+				
+			</div>
+
+			<div class="toggle">
+				
+			</div>
+
+			<div class="navigation">
+				<ul>
+					<li class="list">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="list active">
+						<a href="about.html">Get To Know Me</a>
+					</li>
+					<li class="list">
+						<a href="myWorks.html">Projects</a>
+					</li>
+					<li class="list">
+						<a href="contactMe.html">Contact Me</a>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+				<a class="dlRes" href="assets/JeraldineBolilan_Resume.docx" download>Download Resume</a>
+			</div>
+
+		</header>
+
+		<section id="about">
+			<div class="page-outer">
+				<span class="tags top-tags">
+					&lthtml&gt
+				<br>
+				</span>
+				<div class="page-inner">
+					<div class="page-about">
+						<div class="about-text">
+							<h2 id="element2"></h2>
+							<p><br>I’m an entry level Full Stack Web Developer located in the Philippines.</p>
+							<p>I am a well-organised person, a problem solver, independent employee with high attention to detail. I am a family person and a mother of two brilliant babies.</p>
+						</div>
+						<div class="about-skills" >
+							<div id="tag-cloud">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<span class="tags bottom-tags">
+					<br>
+					&lt/html&gt
+				
+				</span>
+			</div>
+		</section>
+
+
+		<script>
+			const list = document.querySelectorAll('.list');
+			function activeLink(){
+				list.forEach((item) =>
+				item.classList.remove('active'));
+				this.classList.add('active')
+			}
+			list.forEach((item)=>
+			item.addEventListener('click',activeLink));
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+		<script>
+			var typed2 = new Typed('#element2', {
+			strings: [
+
+					`<span style="color: #E42CE7">My</span>
+					<span style="color: #00BFFF">/Skills</span>`
+					],
+			typeSpeed: 30
+			});
+		</script>
+
+
+		<script>
+			const text = document.querySelector('.text');
+			/*text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");*/
+			text.innerHTML = text.textContent.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class ="keys">$2</span>');
+		</script>
+
+		<script type="text/javascript">
+			window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0)
+		});
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+		<script src="jquery.svg3dtagcloud.min.js"></script>
+
+		<script src="script2.js"></script>
+		<script>
+			$(document).ready(function(){
+				var entries = [
+					{label : 'CSS'},
+					{label : 'PHP'},
+					{label : 'JavaScript'},
+					{label : 'BOOTSTRAP'},
+					{label : 'WordPress'},
+					{label : 'JSON'},
+					{label : 'npm'},
+					{label : 'git'},
+					{label : 'Node JS'},
+					{label : 'MySQL'},
+					{label : 'mongoDB'},
+					{label : 'Laravel'},
+					{label : 'jQuery'},
+					{label : 'Heroku'},
+					{label : 'express'},
+					{label : 'Github'},
+					{label : 'Gitlab'},
+					{label : 'Photoshop'}
+				];
+				var settings = {
+					entries: entries,
+					width: 700,
+					height: 500,
+					radius: '65%',
+					radiusMin: 210,
+					bgDraw:true,
+					bgColor: '#282923',
+					opacityOver:1,
+					opacityOut:0.05,
+					opacitySpeed:3,
+					fov:500,
+					speed: 1,
+					fontFamily:'Courier,sans-serif',
+					fontSize:'20',
+					fontColor:'#fff',
+					fontStyle: 'italic',
+					fontWeight:'bold',
+					fontStretch: 'normal'
+					
+				};
+				$('#tag-cloud').svg3DTagCloud(settings);
+			});
+		</script>
+	</body>
+</html>

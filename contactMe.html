@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Jeraldine | Web Developer</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+		
+
+
+	</head>
+	<body>
+		<header>
+
+			<div class="logo">
+				
+			</div>
+
+			<div class="toggle">
+				
+			</div>
+
+			<div class="navigation">
+				<ul>
+					<li class="list">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="list">
+						<a href="about.html">Get To Know Me</a>
+					</li>
+					<li class="list">
+						<a href="myWorks.html">Projects</a>
+					</li>
+					<li class="list active">
+						<a href="contactMe.html">Contact Me</a>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+				<a class="dlRes" href="assets/JeraldineBolilan_Resume.docx" download>Download Resume</a>
+			</div>
+
+		</header>
+
+		<section id="about">
+			<div class="page-outer">
+				<span class="tags top-tags">
+					&lthtml&gt
+				<br>
+				</span>
+				<div class="page-inner">
+					<div class="page-about">
+						<div class="contactMe-text">
+							<h2 id="element3"></h2>
+							<p> Hello! I am very excited to become a part of your next big project.</p>
+							<p>Please feel free to reach me out using the form or message me on the following social media platforms. See you soon! &nbsp</p>
+							<div class="social">
+								<ul>
+									<li style="--clr:#1877f2;">
+										<a href="#">
+											<i class="fa-brands fa-facebook-f"></i>
+										</a>
+									</li>
+									<li style="--clr:#c32aa3;">
+										<a href="#">
+											<i class="fa-brands fa-instagram"></i>
+										</a>
+									</li>
+									<li style="--clr:#1877f2;">
+										<a href="#">
+											<i class="fa-brands fa-linkedin-in"></i>
+										</a>
+									</li>
+									<li style="--clr:#25d366;">
+										<a href="#">
+											<i class="fa-brands fa-whatsapp"></i>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="contactForm" id="contactForm" >
+							<form>
+								<!-- onsubmit="sendEmail(); reset(); return false;" -->
+								<h3>Send Message</h3>
+								<div class="inputBox">
+									<input id="name" type="text" name="" required="required">
+									<span>Full Name</span>
+								</div>
+								<div class="inputBox">
+									<input type="email" name="" required="required" id="email">
+									<span>Email</span>
+								</div>
+								<div class="inputBox">
+									<textarea required="required" id="message"></textarea>
+									<span>Type your Message...</span>
+								</div>
+								<div class="inputBox">
+									<input id="submit" type="submit" name="" value="Send">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<span class="tags bottom-tags">
+					<br>
+					&lt/html&gt
+				
+				</span>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+		<script>
+			const name = document.getElementById('name');
+			const email = document.getElementById('email');
+			const message = document.getElementById('message');
+			const submit =document.getElementsByClassName('contactForm')[0];
+
+			submit.addEventListener('submit',(e)=>{
+				e.preventDefault();
+				console.log("clicked");
+
+					let ebody = `
+						<b>Name: </b> ${name.value}
+						<br>
+						<b>From: </b> ${email.value}
+						<br>
+						<b>Message: </b> ${message.value}
+						<br>
+					`
+					function resetForm(){
+						document.getElementById("name").value="";
+						document.getElementById("email").value="";
+						document.getElementById("message").value="";
+					}
+
+				Swal.fire({
+						  title: 'Your Inquiry has been sent!',
+						  icon: 'success',
+						  confirmButtonText: 'Cool'
+						}).then((isOkay) => {
+							if (isOkay) {
+								Email.send({
+								    SecureToken : "0bab05e9-f451-483b-9f6e-7d4615fdff0c",
+								    To : 'bolilanjeraldinesalilid@gmail.com',
+								    From : "bolilanjeraldinesalilid@gmail.com",
+								    Subject : "Someone is browsing your portfolio",
+								    Body : ebody
+								}).then(resetForm)
+								//reset()
+							
+								//return false
+								
+							}
+						});
+
+			})
+			
+		</script>
+
+
+		<script>
+			const list = document.querySelectorAll('.list');
+			function activeLink(){
+				list.forEach((item) =>
+				item.classList.remove('active'));
+				this.classList.add('active')
+			}
+			list.forEach((item)=>
+			item.addEventListener('click',activeLink));
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+		<script>
+			var typed2 = new Typed('#element3', {
+			strings: [
+
+					`<span style="color: #00BFFF">Contact</span>
+					<span style="color: #fff">(</span>
+					<span style="color: #FFA500">Me</span>
+					<span style="color: #fff">)</span>
+					<span style="color: #00BFFF; font-size: 1em !important;">=></span>`
+					],
+			typeSpeed: 30
+			});
+		</script>
+		
+	</body>
+</html>

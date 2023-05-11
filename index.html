@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Jeraldine | Web Developer</title>
+		<link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="home-bg">
+		<header>
+
+			<div class="logo">
+				
+			</div>
+
+			<div class="toggle">
+				
+			</div>
+
+			<div class="navigation">
+				<ul>
+					<li class="list active">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="list">
+						<a href="about.html">Get To Know Me</a>
+					</li>
+					<li class="list">
+						<a href="myWorks.html">Projects</a>
+					</li>
+					<li class="list">
+						<a href="contactMe.html">Contact Me</a>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+				<a class="dlRes" href="assets/JeraldineBolilan_Resume.docx" download>Download Resume</a>
+			</div>
+
+		</header>
+
+
+		<section id="home">
+			<div class="page-outer">
+				<span class="tags top-tags">
+					&lthtml&gt
+				<br>
+				</span>
+				<div class="page-inner">
+					<div class="loader">
+						<div class="text">
+							<div>
+								<h1 id="element"></h1>
+							</div>
+						</div>
+						<div class="blob" >
+							<div class="blob-content">
+								  <img src="assets/woman-hi.png" class="pic">
+							</div>
+						</div>
+					</div>
+				</div>
+				<span class="tags bottom-tags">
+					<br>
+					&lt/html&gt
+				
+				</span>
+			</div>
+		</section>
+
+		<script>
+			const list = document.querySelectorAll('.list');
+			function activeLink(){
+				list.forEach((item) =>
+				item.classList.remove('active'));
+				this.classList.add('active')
+			}
+			list.forEach((item)=>
+			item.addEventListener('click',activeLink));
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+		<script>
+			var typed = new Typed('#element', {
+				strings: [
+
+						`<span style="color: #5DFC0A"> Hello! ^1000 </br></span>
+						<span style="color: #E42CE7">I'm</span> 
+						<span style="color: #FFFF00">#JERALDINE</span>
+						<span style="color: #00BFFF">💙</span> <br>
+						<span style="color:#FF0000 ; font-size:1.2rem"><</span>
+						<span style="color:white; font-size:1.2rem">I am a Full Stack Web Developer</span>
+						<span style="color:#FF0000; font-size:1.2rem">></span>
+						`
+
+						],
+				typeSpeed: 20,
+				/*showCursor:false*/
+				});
+
+		</script>
+
+
+		<!-- <script>
+			const text = document.querySelector('.text');
+			/*text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");*/
+			text.innerHTML = text.textContent.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class ="keys">$2</span>');
+		</script> -->
+
+		<script type="text/javascript">
+			window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0)
+		});
+		</script>
+
+		
+	</body>
+</html>
