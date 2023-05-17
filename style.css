@@ -280,6 +280,28 @@ header .navigation .dlRes:hover{
 	height: 237px;
 
 }
+.loader:before {
+    content: '<h1>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+/*    margin-top: -5rem;*/
+    top: 15rem;
+    left: 90px;
+}
+
+.loader:after {
+    content: '</h1>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 3.8rem;
+    top: 30rem;
+    left: 90px;
+}
+
 
 .loader .blob{
 	width: 40%;
@@ -347,27 +369,6 @@ header .navigation .dlRes:hover{
 	width: 60%;
 }*/
 
-.loader:before {
-    content: '<h1>';
-    font-family: 'La Belle Aurore',cursive;
-    color: #515152;
-    font-size: 1.5rem;
-    position: absolute;
-   /* margin-top: -5rem;*/
-    top: 50px;
-    left: 100px;
-}
-
-.loader:after {
-    content: '</h1>';
-    font-family: 'La Belle Aurore',cursive;
-    color: #515152;
-    font-size: 1.5rem;
-    position: absolute;
-    margin-top: 3.8rem;
-    top: 150px;
-    left: 90px;
-}
 
 .typed-cursor {
 	color: #fff;
@@ -456,7 +457,7 @@ header .navigation .dlRes:hover{
 	font-weight: 900;
 }
 
-#element2:before{
+.text-holder:before{
 	content: '<h1>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
@@ -467,14 +468,16 @@ header .navigation .dlRes:hover{
     font-weight: normal;
 }
 
-#element2:after{
+
+
+.text-holder:after{
 	content: '</h1>';
     font-family: 'La Belle Aurore',cursive;
     color: #515152;
     font-size: 18px;
     position: absolute;
-    margin-left: -1rem;
-    bottom: -4rem;
+    margin-left: -23rem;
+    bottom: 32rem;
     font-weight: normal;
 }
 
@@ -711,7 +714,7 @@ header .navigation .dlRes:hover{
     font-size: 20px;
     position: absolute;
     margin-top: -2rem;
-    left: -1rem;
+    left: 7.5rem;
     font-weight: normal;
 }
 
@@ -721,8 +724,8 @@ header .navigation .dlRes:hover{
     color: #515152;
     font-size: 18px;
     position: absolute;
-    left: -1rem;
-    bottom: -4rem;
+    left: 7.5rem;
+/*    bottom: -4rem;*/
     font-weight: normal;
 }
 
